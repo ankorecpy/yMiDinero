@@ -1,0 +1,29 @@
+page-inicio {
+    
+    .base {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .botones {
+        height: 10%;
+        flex-direction: row;
+    }
+
+    .entradas {
+        display: flex;
+        flex:1;
+        height:30%;
+        flex-direction: column;
+    }
+
+    
+
+    .base .logo {
+        padding: 15%;
+        vertical-align: middle;
+        text-align: center;
+        height: 50%;
+        background: blue;
+    }
+}
