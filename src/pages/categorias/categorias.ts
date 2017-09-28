@@ -1,23 +1,27 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { AgregarCategoriaPage } from '../agregar-categoria/agregar-categoria';
+import { CategoriaOperacion } from '../../providers/clases_concretas/categoria_operacion';
+import { CategoriaDao } from '../../providers/base_de_datos/categorias-dao';
 
-/**
- * Generated class for the CategoriasPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-categorias',
   templateUrl: 'categorias.html',
 })
 export class CategoriasPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private listaCategorias: CategoriaOperacion[];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public categoriaDao: CategoriaDao) {
   }
 
   ionViewDidLoad() {
+      this.listaCategorias = this.categoriaDao.listaCategoria;
+  }
+  ionViewWillEnter() {
+      this.listaCategorias = this.categoriaDao.listaCategoria;
+  }
+  irAAdicionar(): void {
+    this.navCtrl.push(AgregarCategoriaPage);    
   }
 
 }
