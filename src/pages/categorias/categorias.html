@@ -1,5 +1,4 @@
 <ion-header>
-
   <ion-navbar color="primary">
     <ion-buttons left>
       <button ion-button icon-only color="light" menuToggle>
@@ -7,24 +6,25 @@
       </button>
     </ion-buttons>
     <ion-title>Categorias</ion-title>
-    <ion-buttons right>
-      <button ion-button icon-only color="light" (click)="irAAdicionar()">
-        <ion-icon name="md-add"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list *ngFor="let categoria of this.listaCategorias; let indice = index">
-    <ion-item class="categoria">
-      <ion-row>
-        <button ion-button class="color" color={{categoria.obtenerColor()}}></button>
-        <h2 class="titulo">{{categoria.nombre}}</h2>
-        <button ion-button color="light" icon-only>
-          <ion-icon class="boton" name="ios-arrow-forward"></ion-icon>
-        </button>
-      </ion-row>
-    </ion-item>
-  </ion-list>
+<ion-content class="base">
+  <div class="categoria" *ngFor="let categoria of this.listaCategorias; let indice = index">
+    <div class="color">
+      <button class="boton" ion-button color={{categoria.obtenerColor()}}></button>
+    </div>
+    <div class="titulo">
+      <h4>{{categoria.nombre}}</h4>
+    </div>
+    <div class="botones">
+      <button class="boton opcion" ion-button item-end>
+          <ion-icon name="ios-arrow-forward-outline"></ion-icon>
+      </button>
+    </div>
+  </div>
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="irAAdicionar()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+  <div class="final"></div>
 </ion-content>

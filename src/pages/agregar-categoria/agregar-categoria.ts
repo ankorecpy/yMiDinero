@@ -11,7 +11,7 @@ export class AgregarCategoriaPage {
 
   private nombre: String;
   private color: String;
-  private listaColores: String[] = ["altBlue", "altBlack", "altYellow", "altOrange", "altPurple", "altGrey", "altRed", "altGreen"];
+  private listaColores: String[] = ["altAzul", "altNegro", "altAmarillo", "altNaranja", "altPurpura", "altGris", "altRojo", "altLimon", "altAguaMarina", "altRosado"];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public categoriaDao: CategoriaDao) {
   }

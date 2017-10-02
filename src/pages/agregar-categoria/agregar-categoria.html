@@ -8,10 +8,11 @@
   <div class="entrada">
     <ion-item>
       <ion-label floating>nombre</ion-label>
-      <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+      <ion-input type="text" [(ngModel)]='this.nombre'></ion-input>
     </ion-item>
   </div>
   <div class="colores">
+    <p>Elija un color representativo para la Categoria</p>
     <ion-row>
       <ion-col *ngFor="let color of this.listaColores">
         <button ion-button color={{color}} (click)="this.cambiarColor(color)"></button>

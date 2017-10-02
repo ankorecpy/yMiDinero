@@ -34,18 +34,20 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #f53d3d,
-  secondary:  #32db64,
+  primary:    rgb(255, 25, 3),
+  secondary:  rgb(255, 208, 6),
   light:      #f4f4f4,
   dark: black,
-  altBlue:  blue,
-  altBlack:       #222,
-  altYellow:     yellow,
-  altOrange:     orange,
-  altPurple:     purple,
-  altGrey:      grey,
-  altRed:    red,
-  altGreen:   green
+  altAzul:  rgb(59, 55, 215),
+  altNegro:       #222,
+  altAmarillo:     yellow,
+  altNaranja:     rgb(255, 133, 6),
+  altPurpura:     rgb(163, 10, 245),
+  altGris:      grey,
+  altRojo:    #f53d3d,
+  altLimon:   rgb(166, 244, 22),
+  altAguaMarina: rgb(3, 255, 194),
+  altRosado: rgb(255, 6, 230)
 );
 
 
