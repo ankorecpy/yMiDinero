@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { CategoriaOperacion } from '../../providers/clases_concretas/categoria_operacion';
+import { CategoriaDao } from '../../providers/base_de_datos/categorias-dao';
 
 @Component({
   selector: 'page-subcategorias',
@@ -8,11 +9,12 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class SubcategoriasPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private categoria: CategoriaOperacion;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public categoriaDao: CategoriaDao) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SubcategoriasPage');
+  ionViewWillEnter() {
   }
 
 }

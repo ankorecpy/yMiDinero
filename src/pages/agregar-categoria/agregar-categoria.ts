@@ -23,7 +23,7 @@ export class AgregarCategoriaPage {
   }
   private agregarCategoria(): void {
     let nuevaCategoria = new CategoriaOperacion(1, this.nombre, this.color);
-    this.categoriaDao.agregar(nuevaCategoria);
+    this.categoriaDao.agregarCategoria(nuevaCategoria);
     this.navCtrl.pop();
   }
 
